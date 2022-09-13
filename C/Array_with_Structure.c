@@ -1,5 +1,5 @@
 #include<stdio.h>
-struct stdata
+union stdata
 {
     int id;
     char nm[20];
@@ -11,12 +11,13 @@ void main()
     {
         printf("\nEnter student id:");
         scanf("%d",&st[i].id);
-        pritnf("\nEnter student name:");
+        printf("\nEnter student name:");
         scanf("%s",&st[i].nm);
     }
     for(i = 0; i < 5; i++)
     {
-        pritnf("\n%d Student id is:%d",i+1,st[i].id);
+        printf("\n%d Student id is:%d",i+1,st[i].id);
         printf("\n%d Student name is:%s",i+1,st[i].nm);
     }
 }
+  
