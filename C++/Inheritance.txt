@@ -1,0 +1,17 @@
+Inheritance:
+Reusablty of class
+typs:-
+1.Single level Inheritance
+->There's only one perent(base) class and one child(derived) class
+
+2.Multiple Inheritance
+->There's one base class and multiple derived class
+
+3.Multilevel Inheritance
+->One perent class, one sub-perent class and one child class (continue.....)
+
+4.Hirachical Inheritance
+->multiple base class and only one derived class
+
+5.Hybrid Inheritance
+->combition of two any types
