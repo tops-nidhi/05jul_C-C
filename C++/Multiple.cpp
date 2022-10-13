@@ -1,54 +1,58 @@
 #include<iostream>
 using namespace std;
-class Multiple
+class Akshay
 {
 public:
-    int a,b;
-    void getdata(){
-        cout<<"Enter 2 no:";
-        cin>>a>>b;
+    int aid;
+    void adata()
+    {
+        cout<<"Akshay:-\n";
+        cout<<"Enter your id:";
+        cin>>aid;
     }
 };
-class Add : public Multiple
+class Milan
 {
 public:
-    int add()
+    int mid;
+    void mdata()
     {
-        cout<<"Addition is:"<<a+b;
-        return 0;
+        cout<<"\nMilan:-";
+        cout<<"\nEnter your id:";
+        cin>>mid;
     }
 };
-class Sub : public Multiple
+class Gaurav
 {
-private:
-    /* data */
 public:
-    int sub()
+    int gid;
+    void gdata()
     {
-        cout<<"Substrction is:"<<a-b;
+        cout<<"\nGaurav:-\n";
+        cout<<"Enter your id:";
+        cin>>gid;
+    }
+};  
+class Tops : public Akshay, public Milan, public Gaurav
+{
+public:
+    int showdata()
+    {
+        cout<<"\n----------Akshay----------";
+        cout<<"\n\tYour id is:"<<aid;
+        cout<<"\n\n----------Milan-----------";
+        cout<<"\n\tYour id is:"<<mid;
+        cout<<"\n\n-----------Gaurav----------";
+        cout<<"\n\tYour id id:"<<gid;
         return 0;
-    }   
+    }
 };
 int main()
 {
-    int ch;
-    Sub s1;
-    Add a1;
-    cout<<"\n1.Add\n2.Sub"<<endl;
-    cout<<"Enter your choice:";
-    cin>>ch;
-    switch (ch)
-    {
-    case 1:
-        a1.getdata();
-        a1.add();
-        break;
-    
-    case 2:
-        s1.getdata();
-        s1.sub();
-    default:
-        cout<<"\nNot valid";
-        break;
-    }
+    Tops t1;
+    t1.adata();
+    t1.mdata();
+    t1.gdata();
+    t1.showdata();
+    return 0;
 }
